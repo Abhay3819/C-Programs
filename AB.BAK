@@ -1,0 +1,11 @@
+#include<stdio.h>
+void main ()
+{
+  int a,b,c;
+  a=15
+  b=8
+  c=9
+  c=a+b;
+  printf("%d,%d,%d",c);
+
+}

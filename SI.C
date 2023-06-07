@@ -1,0 +1,16 @@
+ #include<stdio.h>
+ void main()
+ {
+  float p,r,si;
+  int t;
+  p=1443.2;
+  r=2.5;
+  t=3;
+  si=p*r*t/100;
+  printf("%f",si);
+
+
+
+
+ }
+

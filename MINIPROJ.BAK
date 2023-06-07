@@ -1,0 +1,51 @@
+//creating logning window
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{
+char pass[30],original[30],ch;
+int i;
+FILE *fp;
+window(1,1,80,25);
+textbackground(YELLOW);
+clrscr();
+window(20,10,60,15);
+textbackground(BLACK);
+clrscr();
+gotoxy(4,3);
+textcolor(RED+BLINK);
+cprintf("Enter the password : ");
+i=0;
+while(1)
+{
+ch=getch();
+if(ch==13)   //ASCII code enter key
+{
+pass[i]='\0';
+break;
+}
+pass[i++]=ch;
+printf("*");
+}
+//reading data from file
+fp=fopen("password.dat","r");
+fgets(original,30,fp);
+fclose(fp);
+if(!strcmp(original,pass)==0)
+{
+gotoxy(4,5);
+textcolor(WHITE+BLINK);
+cprintf("Inorrect password , Press and key....");
+getch();
+exit(0);
+}
+else
+{
+window(1,1,80,25);
+textbackground(11);
+clrscr();
+}
+getch();
+}

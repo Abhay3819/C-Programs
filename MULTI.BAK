@@ -1,0 +1,13 @@
+ #include<stdio.h>
+ #include<conio.h>
+ void main()
+ {
+  float a;
+  int b;
+  float c;
+  a=1.56;
+  b=2;
+  c=a*b;
+  printf("%f",c);
+
+ }
